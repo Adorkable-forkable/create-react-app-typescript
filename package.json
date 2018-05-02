@@ -1,4 +1,8 @@
 {
+  "version": "v2.15.1",
+  "workspaces": [
+    "packages/*"
+  ],
   "private": true,
   "scripts": {
     "build": "node packages/react-scripts/scripts/build.js",
@@ -6,7 +10,7 @@
     "create-react-app": "tasks/cra.sh",
     "e2e": "tasks/e2e-simple.sh",
     "e2e:docker": "tasks/local-test.sh",
-    "postinstall": "node bootstrap.js && cd packages/react-error-overlay/ && npm run build:prod",
+    "postinstall": "node bootstrap.js && cd packages/react-error-overlay/ && yarn build:prod",
     "publish": "tasks/release.sh",
     "start": "node packages/react-scripts/scripts/start.js",
     "test": "node packages/react-scripts/scripts/test.js --env=jsdom",
